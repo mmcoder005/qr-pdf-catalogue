@@ -22,7 +22,7 @@ When scanned, the QR code opens the PDF directly to that page.
 
 ### Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/qr-pdf-catalogue)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mmcoder005/qr-pdf-catalogue)
 
 Or use Vercel CLI:
 ```bash
