@@ -35,12 +35,21 @@
         const urlParams = new URLSearchParams(window.location.search);
         const pageNumber = urlParams.get('page') || 1;
 
-        // Set your PDF file path here
-        const pdfPath = 'Indonesia Pavilion Catalogue (1).pdf';
+        // Define the PDF file path
+        const pdfFileName = 'Indonesia Pavilion Catalogue (1).pdf';
 
-        // Load PDF with page number
-        const viewer = document.getElementById('pdf-viewer');
-        viewer.src = `${pdfPath}#page=${pageNumber}`;
+        // Detect mobile devices (iOS, Android)
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            // For mobile, redirect directly to the PDF file for a better native experience.
+            // This is required for iOS to support multi-page scrolling in PDFs.
+            window.location.replace(`${encodeURIComponent(pdfFileName)}#page=${pageNumber}`);
+        } else {
+            // For desktop, use the built-in iframe reader.
+            const viewer = document.getElementById('pdf-viewer');
+            viewer.src = `${pdfFileName}#page=${pageNumber}`;
+        }
     </script>
 </body>
 
