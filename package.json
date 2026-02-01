@@ -1,0 +1,9 @@
+{
+    "name": "qr-pdf-catalogue",
+    "version": "1.0.0",
+    "description": "QR-based PDF catalogue viewer",
+    "scripts": {
+        "dev": "npx serve .",
+        "build": "echo 'No build needed - static files only'"
+    }
+}

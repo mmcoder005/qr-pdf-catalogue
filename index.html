@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Catalogue</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="pdf-viewer" src="" type="application/pdf"></iframe>
+
+    <script>
+        // Get page number from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const pageNumber = urlParams.get('page') || 1;
+
+        // Set your PDF file path here
+        const pdfPath = 'Indonesia Pavilion Catalogue (1).pdf';
+
+        // Load PDF with page number
+        const viewer = document.getElementById('pdf-viewer');
+        viewer.src = `${pdfPath}#page=${pageNumber}`;
+    </script>
+</body>
+
+</html>
