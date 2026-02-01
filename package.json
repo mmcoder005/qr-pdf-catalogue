@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "QR-based PDF catalogue viewer",
     "scripts": {
-        "dev": "npx serve .",
+        "dev": "npx serve public",
         "build": "echo 'No build needed - static files only'"
     }
 }
